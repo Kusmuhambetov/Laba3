@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="299" Width="490" MinHeight="299" MinWidth="490">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="161"/>
+            <ColumnDefinition Width="332"/>
+            <ColumnDefinition Width="98"/>
+
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="0,0,3,0">
+            <Label Grid.Row="0" HorizontalContentAlignment="Left" FontSize="20" Margin="0,0,0,4" Height="40" Width="157">
+                Имя:
+            </Label>
+            <Label  Height="46" Width="160" HorizontalContentAlignment="Left" FontSize="20" Margin="0,2,0,0" Grid.Row="1">
+                Фамилия:
+            </Label>
+            <Label HorizontalContentAlignment="Left" FontSize="20"  HorizontalAlignment="Center" Grid.Row="2" Width="156" Margin="0,1,0,0" Height="99" >
+                Дата рождения:
+            </Label>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="0,1,0,0">
+            <TextBox Grid.Row="0"  Height="40" Width="324" x:Name="Name" Margin="1,0,2,0" Grid.Column="1" HorizontalAlignment="Left" />
+            <TextBox Grid.Row="1"  x:Name="SubName" TextChanged="Password_TextChanged" Margin="0,2,1,0" Grid.Column="1" Height="44" Width="324" HorizontalAlignment="Left" />
+            <DatePicker HorizontalAlignment="Left" Width="323" x:Name="Calendar" Height="43" Grid.Column="1" Grid.Row="2" />
+            <Button x:Name="Dopusk" Height="103" Content="Проверить допуск" Click="Dopusk_Click" Width="185" HorizontalAlignment="Left"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
